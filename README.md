@@ -4,8 +4,6 @@ Use [https://github.com/svenar-iot/esphome-comfoair](https://github.com/svenar-i
 
 ![Image](https://raw.githubusercontent.com/wichers/lovelace-comfoair/master/result.png)
 
-[![Install with HACS](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=wichers&repository=lovelace-comfoair)
-
 # Manual installation
 
 * Clone this repo into your `www` folder inside your configuration. So it will be: `config_folder/www/lovelace-comfoair`.
