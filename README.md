@@ -13,8 +13,29 @@ resources:
   - type: module
     url: /local/lovelace-comfoair/comfoair-card.js
 ```
-* Add a card with `type: 'custom:comfoair-card'` and `entity: 'climate.put-your-comfoair-name-here'` to your UI.
+* Add a card with `type: 'custom:comfoair-card'` to your UI, or just use the visual card editor.
 * Restart home assistant
+
+# Configuration
+
+All sensors are derived from a configurable `prefix` (default `wtw`), so the card
+reads `sensor.<prefix>_outside_temperature`, `binary_sensor.<prefix>_bypass_open`, etc.
+
+| Option | Default | Description |
+|---|---|---|
+| `entity` | auto-detected | Climate entity used for the target temperature (e.g. `climate.wtw`) |
+| `prefix` | `wtw` | Entity prefix of the ComfoAir/WHR sensors |
+| `title` | *(empty)* | Optional card title |
+| `image` | bundled drawing | Background image URL; `none` hides it |
+
+Example:
+
+```yaml
+type: custom:comfoair-card
+entity: climate.wtw
+prefix: wtw
+title: WTW
+```
 * ???
 * Profit!
 
@@ -29,5 +50,5 @@ If you prefer to manage the card via HACS:
    url: /hacsfiles/lovelace-comfoair/comfoair-card.js
    type: module
    ```
-4. Use the card with `type: 'custom:comfoair-card'` and your climate entity as shown above.
+4. Use the card with `type: 'custom:comfoair-card'` and configure it in the visual editor (climate entity + prefix), or via YAML as shown above.
 
